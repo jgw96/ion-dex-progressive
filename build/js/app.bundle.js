@@ -72511,16 +72511,17 @@
 	        this.http = http;
 	    }
 	    PokeService.prototype.getPokemon = function () {
-	        return this.http.get("http://pokeapi.co/api/v2/generation/1/")
+	        return this.http.get("https://pokeapi.co/api/v2/generation/1/")
 	            .map(function (res) { return res.json(); })
 	            .catch(this.handleError);
 	    };
 	    PokeService.prototype.getPokes = function (name) {
-	        return this.http.get("http://pokeapi.co/api/v2/pokemon/" + name)
+	        return this.http.get("https://pokeapi.co/api/v2/pokemon/" + name)
 	            .map(function (res) { return res.json(); })
 	            .catch(this.handleError);
 	    };
 	    PokeService.prototype.getColor = function (url) {
+	        console.log(url);
 	        return this.http.get(url)
 	            .map(function (res) { return res.json(); })
 	            .catch(this.handleError);
