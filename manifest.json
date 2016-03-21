@@ -1,0 +1,13 @@
+{
+  "short_name": "IonDex",
+  "name": "IonDex",
+  "start_url": "index.html",
+  "background_color": "#F44336",
+  "theme_color": "#F44336",
+  "display": "standalone",
+  "icons": [{
+    "src": "pokeball.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }]
+}
