@@ -6,7 +6,16 @@
 
 <ion-content class="page2">
 
-    <ion-list>
+    <ion-card [hidden]="noPokemon">
+        <ion-card-header>
+            No Pokemon
+        </ion-card-header>
+        <ion-card-content>
+            You havent added any pokemon to your team yet!
+        </ion-card-content>
+    </ion-card>
+
+    <ion-list [hidden]="!noPokemon">
         <ion-item *ngFor="#poke of pokemon">
             <ion-avatar item-left>
                 <img src="{{poke.sprite}}">
@@ -15,5 +24,9 @@
             <button clear (click)="deletePoke(poke.name)" item-right>Remove</button>
         </ion-item>
     </ion-list>
+
+    <button (click)="shareTeam()" style="postion: absolute; z-index:9999;" id="addButton" fab fab-bottom fab-right>
+        <ion-icon name="share"></ion-icon>
+    </button>
 
 </ion-content>
